@@ -1,9 +1,6 @@
 package com.nana;
 
-/**
- * Created by NaNa on 10/7/2016.
- */
-public enum LabelConstants {
+enum LabelConstants {
     INFO("Type number from 0 to 99"),
     WRONG_NUMBER("Your number is > 99 or < 0. Please type number from 0 to 99"),
     WRONG_INPUT_TYPE(" Oops, you typed word. Type number please!"),

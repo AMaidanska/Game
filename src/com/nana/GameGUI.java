@@ -4,15 +4,13 @@ import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-/**
- * Created by NaNa on 10/7/2016.
- */
-public class GameGUI extends JFrame {
+class GameGUI extends JFrame {
     private JTextField inputNumberField = new JTextField();
     private JLabel infoLabel = new JLabel();
     private JLabel printResultLabel = new  JLabel();
     private JButton startButton = new JButton();
-    public GameGUI(){
+
+    GameGUI(){
         initComponents();
     }
 
@@ -24,7 +22,7 @@ public class GameGUI extends JFrame {
 
         startButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                startButtonActionPerformed(evt);
+                startButtonActionPerformed();
             }
         });
 
@@ -46,7 +44,7 @@ public class GameGUI extends JFrame {
                                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        layout.linkSize(SwingConstants.HORIZONTAL, new java.awt.Component[] {startButton, inputNumberField});
+        layout.linkSize(SwingConstants.HORIZONTAL, startButton, inputNumberField);
 
         layout.setVerticalGroup(
                 layout.createParallelGroup(GroupLayout.Alignment.LEADING)
@@ -64,13 +62,8 @@ public class GameGUI extends JFrame {
         pack();
     }
 
-    private void   startButtonActionPerformed(ActionEvent evt)  {
+    private void   startButtonActionPerformed()  {
         String  text = inputNumberField.getText();
         printResultLabel.setText(Game.parseNumber(text));
-
     }
-
-
-
-
 }

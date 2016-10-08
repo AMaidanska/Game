@@ -1,10 +1,6 @@
 package com.nana;
 
-
-/**
- * Created by NaNa on 10/7/2016.
- */
-public class Game {
+class Game {
 
      static String parseNumber (String text){
          int number;
